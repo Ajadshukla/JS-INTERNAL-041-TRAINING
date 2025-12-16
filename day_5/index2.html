@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Center Form</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 22px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">HCL ASSESSMENT</div>
+    <div class="logo">MyLogo</div>
+
+    <form action="registration.html" method="get">
+        <label>User ID:</label>
+        <input type="text" name="firstname" placeholder="Enter name">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter password">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

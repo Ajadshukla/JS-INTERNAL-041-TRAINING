@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>example of dom with js</title>
+</head>
+<body>
+   <h1 id="hid1">this is first heading</h1>
+   <h2 id="hid2">this is second heading</h2>
+   <button type="submit" onclick="fun()">click to change h1</button>
+   <button type="submit" onclick="fun2()">click to change h2</button>
+
+   <button id="button3">button3</button>
+   <button id = "button4">submit</button>
+
+   <script>
+      
+
+      function fun()
+      {
+         document.getElementById("hid1").innerHTML="new value";
+      }
+      function fun2()
+      {
+         document.getElementById("hid2").innerHTML="new value 2";
+      }
+
+      document.getElementById("button3").addEventListener("submit",function(){
+         document.getElementById("button3").innerHTML="value on click on element ";
+      }
+   
+   
+   )
+
+
+   </script>
+
+   
+</body>
+</html>

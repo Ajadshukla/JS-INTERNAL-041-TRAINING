@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>example of dom with js</title>
+</head>
+<body>
+    <h1 id="hid1">this is first heading</h1>
+    <h2 id="hid2">this is second heading</h2>
+    <button type="submit" onclick="fun()">click to change h1</button>
+    <button type="submit" onclick="fun2()">click to change h2</button>
+
+    <br><br>
+
+    <button id="redBtn">Red</button>
+    <button id="blueBtn">Blue</button>
+    <button id="greenBtn">Green</button>
+
+    <script>
+        function fun()
+        {
+           document.getElementById("hid1").innerHTML="new value";
+        }
+        function fun2()
+        {
+           document.getElementById("hid2").innerHTML="new value 2";
+        }
+
+        const body = document.body;
+        const redBtn = document.getElementById("redBtn");
+        const blueBtn = document.getElementById("blueBtn");
+        const greenBtn = document.getElementById("greenBtn");
+
+        redBtn.addEventListener("click", function() {
+            body.style.backgroundColor = "red";
+        });
+
+        blueBtn.addEventListener("click", function() {
+            body.style.backgroundColor = "blue";
+        });
+
+        greenBtn.addEventListener("click", function() {
+            body.style.backgroundColor = "green";
+        });
+    </script>
+</body>
+</html>

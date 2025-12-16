@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Form Layout validation referencing and dom ka example</title>
+   
+</head>
+<body>
+
+    <h2>Login Form</h2>
+    
+    <form id="form">
+        
+            <input type="text" id="userName" name="userName" placeholder="Enter Name">
+        
+            <input type="password" id="userPass" name="userPass" placeholder="Enter Password">
+      
+            <button type="submit">submit</button>
+
+            <p style="color: brown;" id="p"></p>
+       
+    </form>
+
+    <script>
+       document.getElementById("form").addEventListener("submit", function(event){
+         event.preventDefault();
+         let a = document.getElementById("username").value();
+
+         if(a=="")
+         {
+            error.innerHTML="value cannot be empty";
+         }
+         else{
+            error.style.color
+         }
+
+       })
+
+    </script>
+
+</body>
+</html>
