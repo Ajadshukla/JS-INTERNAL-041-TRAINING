@@ -11,8 +11,9 @@
 <script>
    let params = new URLSearchParams(window.location.search);
    let na = params.get("firstname");
+   let na2 = params.get("password");
 
-   document.getElementById("hd1").innerHTML = `Welcome! ${na}`;
+   document.getElementById("hd1").innerHTML = `Welcome! ${na} your password is : ${na2}`;
 </script>
 
 </body>

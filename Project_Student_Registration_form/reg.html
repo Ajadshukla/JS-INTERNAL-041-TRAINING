@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Details</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+        }
+        .box {
+            width: 50%;
+            margin: 100px auto;
+            padding: 20px;
+            background: #dff0d8;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Registration Successful</h2>
+    <p id="details"></p>
+</div>
+
+<script>
+    let params = new URLSearchParams(window.location.search);
+
+    let name = params.get("name");
+    let email = params.get("email");
+    let gender = params.get("gender");
+    let course = params.get("course");
+
+    document.getElementById("details").innerHTML = `
+        <b>Name:</b> ${name}<br><br>
+        <b>Email:</b> ${email}<br><br>
+        <b>Gender:</b> ${gender}<br><br>
+        <b>Course:</b> ${course}
+    `;
+</script>
+
+</body>
+</html>

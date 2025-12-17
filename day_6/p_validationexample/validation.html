@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Demo of any project starting</title>
+</head>
+
+<body>
+
+   <center>
+      <h1>demo of online project</h1>
+   </center>
+
+
+   <hr color="green">
+   Home
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gallary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menue3
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu6
+   <hr color="green">
+
+
+   <div style="position: absolute;left: 1%; width: 33%; height: 70%; top: 20%; background-color: aqua;">
+      <center>
+         <br><br>
+         text1<br>
+         text1<br>
+         text1<br>
+         text1<br>
+         text1<br>
+         text1<br>
+      </center>
+   </div>
+  
+
+
+   <div style="position: absolute;left: 33%; width: 33%; height: 70%; top: 20%; background-color:greenyellow;">
+     <center>important notice</center> 
+     <br>
+     <marquee direction ="up" onmouseover="stop()"onmouseout="start()">
+      <center>
+      notice 1 <br>
+       notice 1 <br>
+        notice 1 <br>
+         notice 1 <br>
+          notice 1 <br>
+           notice 1 <br> 
+           notice 1 <br>
+            notice 1 <br>
+         </center>
+     </marquee>
+   </div>
+
+
+   <div style="position: absolute;left: 66%; width: 33%; height: 70%; top: 20%; background-color: blue;">
+      <center>Login</center>
+      <br>
+      <center>
+      <form action="log.html" method="get" id="fid">
+
+      <table>
+         <tr>
+            <td> User Name :</td>
+            <td><input type="text" id="username" placeholder="enter any text"></td>
+         </tr>
+           <tr>
+            <td> Password :</td>
+            <td><input id="password" type="text" placeholder="enter any password"></td>
+         </tr>
+      </table>
+      <p id="errorMsg" style="color:red;"></p>
+
+      </center>
+      
+      <center>
+       <button type="submit">submit</button>
+       <button type="cancel">cancel</button>
+       </form>
+       <br>
+       <a href="reg.html" style="color: white;">new user login</a>
+       </center>
+   </div>
+
+
+<script>
+document.getElementById("fid").addEventListener("submit", function(event) {
+
+    event.preventDefault();   // stop form submission
+
+    let user = document.getElementById("username").value.trim();
+    let pass = document.getElementById("password").value.trim();
+    let msg  = document.getElementById("errorMsg");
+
+    if (user == "" || pass == "") {
+        msg.textContent = "Username and Password cannot be empty";
+        msg.style.color = "red";
+    } else {
+        msg.textContent = "Form validated successfully!";
+        msg.style.color = "green";
+        // form.submit(); // enable this later if you want to go to next page
+    }
+});
+</script>
+
+
+</body>
+
+</html>
